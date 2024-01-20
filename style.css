@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 100px;
+  gap: 9pc;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2pc;
+}
+
+h1 {
+  color: white;
+  z-index: 1;
+  font-weight: 300;
+  font-size: 40px;
+  text-align: center;
+}
+
+.grid {
+  width: 801px;
+  height: 801px;
+  background-size: 80px 80px;
+  background-image: linear-gradient(to right, blue 1px, transparent 1px),
+    linear-gradient(to bottom, blue 1px, transparent 1px);
+  box-shadow: 0px 0px 490px 20px blue;
+}
+
+.pacman {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 10%;
+}
+
+.pacmanShape {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: conic-gradient(yellow 55deg, transparent 0 125deg, yellow 0);
+  animation-name: wakawaka;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wakawaka {
+  0% {
+    background: conic-gradient(yellow 55deg, transparent 0 125deg, yellow 0);
+  }
+  100% {
+    background: conic-gradient(yellow 180deg, transparent 0 125deg, yellow 0);
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: fit-content;
+  height: fit-content;
+}
+
+button {
+  all: unset;
+  padding: 10px;
+  cursor: pointer;
+}
+
+i {
+  font-size: 4pc;
+  color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 2pc;
+  }
+
+  .grid {
+    align-self: center;
+    width: 301px;
+    height: 301px;
+    background-size: 30px 30px;
+    background-image: linear-gradient(to right, blue 1px, transparent 1px),
+      linear-gradient(to bottom, blue 1px, transparent 1px);
+    box-shadow: 0px 0px 490px 20px blue;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  i {
+    font-size: 3pc;
+    color: white;
+  }
+}
